@@ -1,4 +1,4 @@
-const express = require('express');
+အစိတ်အပိုင်းများ express = require('express');
 const moment = require('moment-timezone');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,7 +18,10 @@ app.get('/api/time', (req, res) => {
             formatted_datetime: now.format('YYYY-MM-DD HH:mm:ss'),
             
             // သင်အလိုရှိတဲ့ အစိတ်အပိုင်းများ
+            
             date: now.format('YYYY-MM-DD'),
+            day: parseInt(now.format('D')),
+            month_name: now.format('MMMM'),
             time: now.format('HH:mm:ss'),
             hour: parseInt(now.format('HH')),
             minutes: parseInt(now.format('mm')),
