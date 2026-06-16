@@ -22,6 +22,7 @@ app.get('/api/time', (req, res) => {
             date: now.format('YYYY-MM-DD'),
             day: parseInt(now.format('D')),
             month_name: now.format('MMMM'),
+            today: now.format('MMMM D dddd'),
             time: now.format('HH:mm:ss'),
             hour: parseInt(now.format('HH')),
             minutes: parseInt(now.format('mm')),
